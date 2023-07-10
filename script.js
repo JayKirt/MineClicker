@@ -85,6 +85,10 @@ function handleCellClick(event) {
   const row = parseInt(event.target.dataset.row);
   const col = parseInt(event.target.dataset.col);
 
+  if (board[row][col].revealed) {
+    return;
+  }
+
   revealCell(row, col);
   checkGameStatus();
 }
@@ -97,14 +101,18 @@ function revealCell(row, col) {
 
   revealed[row][col] = true;
   const cell = board[row][col];
+  const cellDiv = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
 
   if (cell.mine) {
     // Game over if a mine is clicked
-    alert("Game Over");
-    resetGame();
+    cellDiv.classList.add("mine");
+    revealAllMines();
+    setTimeout(() => {
+      alert("Game Over");
+      resetGame();
+    }, 500);
   } else if (cell.count > 0) {
     // Show the count of adjacent mines
-    const cellDiv = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
     cellDiv.innerHTML = cell.count;
     cellDiv.classList.add(`count-${cell.count}`);
   } else {
@@ -117,6 +125,18 @@ function revealCell(row, col) {
     revealCell(row + 1, col - 1);
     revealCell(row + 1, col);
     revealCell(row + 1, col + 1);
+  }
+}
+
+// Reveal all mines
+function revealAllMines() {
+  for (let row = 0; row < ROWS; row++) {
+    for (let col = 0; col < COLS; col++) {
+      if (board[row][col].mine) {
+        const cellDiv = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
+        cellDiv.classList.add("mine");
+      }
+    }
   }
 }
 
