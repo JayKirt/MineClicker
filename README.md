@@ -2,7 +2,7 @@
 <h2>Don't click the mines.</h2>
 <h3><ins>To Do:</ins></h3>
 <ol>
-  <li>Make hitting a mine more obvious with colour change or animation.</li>
+  <li> Make hitting a mine more obvious with colour change or animation. </li>
   <li>Implement scoring system to keep track.</li>
   <li>Take in a user generated username.</li>
 </ol>
