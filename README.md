@@ -15,5 +15,5 @@
   <li> Repeat all steps. </li>
 </ol>
 
-<h5> Enjoy! :) </h5>
+<h5>Enjoy! :)</h5>
 
