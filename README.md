@@ -4,7 +4,7 @@
 <ol>
   <li> Make hitting a mine more obvious with colour change or animation. </li>
   <li> Implement scoring system to keep track. </li>
-  <li>Take in a user generated username.</li>
+  <li> Take in a user generated username. </li>
 </ol>
 
 <h4><ins>How To Play:</ins></h4>
