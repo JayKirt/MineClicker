@@ -7,7 +7,7 @@
   <li> Take in a user generated username. </li>
 </ol>
 
-<h4><ins>How To Play:</ins></h4>
+<h4> <ins>How To Play:</ins> </h4>
 <ol>
   <li>Click a tile.</li>
   <li>Hope it's not a mine.</li>
