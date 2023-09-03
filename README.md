@@ -12,7 +12,7 @@
   <li>Click a tile.</li>
   <li>Hope it's not a mine.</li>
   <li>Repeat the first two steps until mine.</li>
-  <li> Repeat all steps. </li>
+  <li>Repeat all steps.</li>
 </ol>
 
 <h5>Enjoy! :)</h5>
